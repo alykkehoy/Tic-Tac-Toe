@@ -24,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="TicTacToe.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B981485B-17EE-4556-BCC3-81AD535EA2E4}</ProjectGuid>

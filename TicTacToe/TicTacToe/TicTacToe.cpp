@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include "Board.h"
+#include "TicTacToe.h"
 
 using namespace std;
 
@@ -19,6 +20,8 @@ int main() {
 
 		board.set_piece(floor(move / 3), move % 3, token);
 		board.print_board();
+		game_over = board.get_game_state();
 	}
+	cout << "The game has ended\n";
 	return 0;
 }

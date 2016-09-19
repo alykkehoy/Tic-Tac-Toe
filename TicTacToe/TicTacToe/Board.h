@@ -8,7 +8,9 @@ public:
 	void print_board();
 	void set_piece(int x, int y, char piece);
 	void print_locations();
+	bool get_game_state();
 private:
+	bool game_over;
 	char board[3][3];
 };
 
