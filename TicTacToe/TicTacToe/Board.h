@@ -10,7 +10,6 @@ public:
 	void print_locations();
 	bool get_game_state();
 private:
-	bool game_over;
 	char board[3][3];
 };
 

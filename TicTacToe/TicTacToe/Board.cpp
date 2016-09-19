@@ -4,7 +4,6 @@
 using namespace std;
 
 Board::Board(){
-	bool game_over = false;
 	char board[3][3];
 	resetBoard();
 }
@@ -13,7 +12,7 @@ Board::Board(){
 Board::~Board(){
 }
 
-//sets all the values in the board array to their inital value of 0
+//sets all the values in the board array to their initial value of ' '
 void Board::resetBoard() {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -30,17 +29,17 @@ void Board::print_board() {
 		}
 		cout << board[i][2];
 		if (i == 2) {
-			cout << endl;
+			cout << "\n\n";
 			return;
 		}
 		cout <<  "\n-----\n";
 	}
 }
 
-//sets an y,x position on the board to a piece number
-void Board::set_piece(int x, int y, char piece) {
+//sets an y,x position on the board to a token
+void Board::set_piece(int x, int y, char token) {
 	if (board[x][y] == ' ') {
-			board[x][y] = piece;
+			board[x][y] = token;
 	}
 	else {
 
