@@ -18,8 +18,13 @@ int main() {
 	cin >> token;
 
 	AI ai;
-	ai.set_token('a');
-	ai.get_move(board);
+	if (token == 'x' || token == 'X') {
+		ai.set_token('Y');
+	}
+	else {
+		ai.set_token('X');
+	}
+	ai.get_move(board, token);
 
 	while (game_over == false) {
 
@@ -39,7 +44,7 @@ int main() {
 			}
 		}
 		else {
-			move = ai.get_move(board);
+			move = ai.get_move(board, token);
 			board.set_piece((int)floor(move / 3), move % 3, ai.get_token());
 		}
 		turn++;
