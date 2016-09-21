@@ -36,7 +36,10 @@ int main() {
 				cout << "Where would you like to place your token?: ";
 				cin >> move;
 				if (move <= 8 && move >= 0) {
-					board.set_piece((int)floor(move / 3), move % 3, token);
+					if (!board.set_piece((int)floor(move / 3), move % 3, token)) {
+						cout << "That position is already taken.\n";
+						move = -1;
+					}
 				}
 				else {
 					cout << "Please enter a valid location.\n";

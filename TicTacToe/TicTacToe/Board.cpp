@@ -37,12 +37,13 @@ void Board::print_board() {
 }
 
 //sets an y,x position on the board to a token
-void Board::set_piece(int x, int y, char token) {
+bool Board::set_piece(int x, int y, char token) {
 	if (board[x][y] == ' ') {
 			board[x][y] = token;
+			return true;
 	}
 	else {
-
+		return false;
 	}
 }
 

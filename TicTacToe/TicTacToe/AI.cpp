@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 using namespace std;
 
@@ -49,5 +50,9 @@ int AI::get_move(Board board, char token) {
 			}
 		}
 	}
-	return rand() % 9;
+	int random_move =  rand() % 9;
+	while (!board.set_piece((int)floor(random_move / 3), random_move % 3, token)) {
+		 random_move = rand() % 9;
+	}
+	return random_move;
 }

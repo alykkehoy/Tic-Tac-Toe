@@ -6,7 +6,7 @@ public:
 	~Board();
 	void resetBoard();
 	void print_board();
-	void set_piece(int x, int y, char piece);
+	bool set_piece(int x, int y, char piece);
 	void print_locations();
 	bool get_game_state();
 private:
